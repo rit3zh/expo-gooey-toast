@@ -80,6 +80,7 @@ const ToastStack: React.MemoExoticComponent<React.FC<IToastStackProps>> = memo(
                 props.defaultBodyLayout ?? ToastivaBodyLayout.Spread
               }
               defaultBodyRadius={props.defaultBodyRadius}
+              defaultCornerSmoothing={props.defaultCornerSmoothing}
               defaultDisableIOSBlur={props.defaultDisableIOSBlur}
               defaultExpandedHeight={props.defaultExpandedHeight}
               defaultExpandedWidth={props.defaultExpandedWidth}

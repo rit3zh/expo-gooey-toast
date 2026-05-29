@@ -158,6 +158,7 @@ interface IToastivaOptions {
   animationPreset?: TToastivaAnimationPreset;
   bodyLayout?: TToastivaBodyLayout;
   bodyRadius?: number;
+  cornerSmoothing?: number;
   content?: ReactNode;
   description?: string;
   disableIOSBlur?: boolean;
@@ -202,6 +203,7 @@ interface IToastivaData {
   animationPreset?: TToastivaAnimationPreset;
   bodyLayout?: TToastivaBodyLayout;
   bodyRadius?: number;
+  cornerSmoothing?: number;
   content?: ReactNode;
   createdAt: number;
   description?: string;
@@ -268,6 +270,7 @@ interface IToastivaConfig {
   animationPreset?: TToastivaAnimationPreset;
   bodyLayout?: TToastivaBodyLayout;
   bodyRadius?: number;
+  cornerSmoothing?: number;
   disableIOSBlur?: boolean;
   duration?: number;
   expand?: boolean;

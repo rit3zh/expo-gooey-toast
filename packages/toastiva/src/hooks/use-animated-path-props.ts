@@ -1,6 +1,6 @@
-import { IUseToastAnimatedStylesParams } from "../typings";
 import { useAnimatedProps } from "react-native-reanimated";
 import { morphPath, morphPathCenter, morphPathRight } from "../morph";
+import { IUseToastAnimatedStylesParams } from "../typings";
 
 const useAnimatedPathProps = <T extends IUseToastAnimatedStylesParams>(
   params: T,
@@ -15,6 +15,7 @@ const useAnimatedPathProps = <T extends IUseToastAnimatedStylesParams>(
     const bodyW = values.bodyWidth.value;
     const expandedHeight = values.expandedHeight.value;
     const bodyRadius = values.bodyRadius.value;
+    const smoothing = values.cornerSmoothing.value;
 
     if (morphAlign === "center") {
       return {
@@ -26,6 +27,7 @@ const useAnimatedPathProps = <T extends IUseToastAnimatedStylesParams>(
           bodyWidth,
           bodyRadius,
           noHeader,
+          smoothing,
         ),
       };
     }
@@ -40,6 +42,7 @@ const useAnimatedPathProps = <T extends IUseToastAnimatedStylesParams>(
           bodyWidth,
           bodyRadius,
           noHeader,
+          smoothing,
         ),
       };
     }

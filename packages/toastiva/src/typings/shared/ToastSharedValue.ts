@@ -5,6 +5,7 @@ interface IToastSharedValue {
   bodyWidth: SharedValue<number>;
   bodyOpacity: SharedValue<number>;
   bodyRadius: SharedValue<number>;
+  cornerSmoothing: SharedValue<number>;
   collapsedHeight: SharedValue<number>;
   descriptionProgress: SharedValue<number>;
   expandedHeight: SharedValue<number>;

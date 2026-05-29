@@ -14,7 +14,7 @@ const HEADER_SMEAR_TEXT_RADIUS = 15;
 const HEADER_TITLE_ENTER_OFFSET = 15;
 const HEADER_TITLE_EXIT_OFFSET = 12;
 const HEADER_TITLE_EXIT_MS = 420;
-const HEADER_TITLE_MORPH_MS = 600;
+const HEADER_TITLE_MORPH_MS = 800;
 
 function createHeaderLayer<T extends IHeaderLayerParams>(props: T) {
   return {

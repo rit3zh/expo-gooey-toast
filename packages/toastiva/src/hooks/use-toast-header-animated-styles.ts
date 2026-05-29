@@ -12,7 +12,7 @@ import {
 import { HEADER_BLUR_INTENSITY } from "../utils/toast-header-animation";
 
 const USE_FILTER_BLUR = Platform.OS === "android" || Platform.OS === "web";
-const HEADER_LAYER_MAX_BLUR_PX = 3.5;
+const HEADER_LAYER_MAX_BLUR_PX = 2.5;
 
 function useToastHeaderAnimatedStyles(
   currentTitleProgress: SharedValue<number>,

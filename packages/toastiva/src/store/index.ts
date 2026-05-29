@@ -49,6 +49,7 @@ function createPromiseToast<TResult, TError = unknown>(
     animationPreset: data.animationPreset,
     bodyLayout: data.bodyLayout,
     bodyRadius: data.bodyRadius,
+    cornerSmoothing: data.cornerSmoothing,
     description: data.description?.loading,
     disableIOSBlur: data.disableIOSBlur,
     dismissible: false,

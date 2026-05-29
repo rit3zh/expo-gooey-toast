@@ -11,6 +11,7 @@ interface IToastMorphSlotProps {
   defaultAnimationPreset: ValueOf<IToastivaConfig, "animationPreset">;
   defaultBodyLayout: ValueOf<IToastivaConfig, "bodyLayout">;
   defaultBodyRadius: ValueOf<IToastivaConfig, "bodyRadius">;
+  defaultCornerSmoothing: ValueOf<IToastivaConfig, "cornerSmoothing">;
   defaultDisableIOSBlur: ValueOf<IToastivaConfig, "disableIOSBlur">;
   defaultExpandedHeight: ValueOf<IToastivaConfig, "expandedHeight">;
   defaultExpandedWidth: ValueOf<IToastivaConfig, "expandedWidth">;

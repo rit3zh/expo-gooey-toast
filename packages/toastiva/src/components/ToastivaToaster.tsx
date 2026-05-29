@@ -40,6 +40,7 @@ const ToastivaToaster: React.MemoExoticComponent<
       expand = false,
       bodyLayout = ToastivaBodyLayout.Spread,
       bodyRadius,
+      cornerSmoothing,
       disableIOSBlur,
       expandedHeight,
       expandedWidth,
@@ -123,6 +124,7 @@ const ToastivaToaster: React.MemoExoticComponent<
               defaultAnimationPreset={animationPreset}
               defaultBodyLayout={bodyLayout}
               defaultBodyRadius={bodyRadius}
+              defaultCornerSmoothing={cornerSmoothing}
               defaultDisableIOSBlur={disableIOSBlur}
               defaultExpandedHeight={expandedHeight}
               defaultExpandedWidth={expandedWidth}
@@ -168,6 +170,7 @@ const ToastivaToaster: React.MemoExoticComponent<
               defaultAnimationPreset={animationPreset}
               defaultBodyLayout={bodyLayout}
               defaultBodyRadius={bodyRadius}
+              defaultCornerSmoothing={cornerSmoothing}
               defaultDisableIOSBlur={disableIOSBlur}
               defaultExpandedHeight={expandedHeight}
               defaultExpandedWidth={expandedWidth}

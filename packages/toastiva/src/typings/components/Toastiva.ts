@@ -11,6 +11,7 @@ interface IToastivaProps {
   defaultAnimation?: ValueOf<IToastivaConfig, "animation">;
   defaultAnimationPreset?: ValueOf<IToastivaConfig, "animationPreset">;
   defaultBodyRadius?: number;
+  defaultCornerSmoothing?: number;
   defaultBodyLayout: TToastivaBodyLayout;
   defaultDisableIOSBlur?: ValueOf<IToastivaConfig, "disableIOSBlur">;
   defaultExpandedHeight?: ValueOf<IToastivaConfig, "expandedHeight">;

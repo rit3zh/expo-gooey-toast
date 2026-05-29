@@ -1,6 +1,7 @@
-import type { IToastIcon } from "../typings/dummy-icons/Icons";
 import React from "react";
 import Svg, { Circle, Line, Path } from "react-native-svg";
+import type { IToastIcon } from "../typings/dummy-icons/Icons";
+
 const CircleIcon = ({
   children,
   color,

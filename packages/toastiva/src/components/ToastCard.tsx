@@ -1,10 +1,10 @@
-import { styles } from "../styles/toast.styles";
-import type { IToastCardProps } from "../typings";
-import { ToastivaHorizontalAlign } from "../typings";
 import React, { memo } from "react";
 import { Platform, Pressable } from "react-native";
 import { GestureDetector } from "react-native-gesture-handler";
 import Animated from "react-native-reanimated";
+import { styles } from "../styles/toast.styles";
+import type { IToastCardProps } from "../typings";
+import { ToastivaHorizontalAlign } from "../typings";
 import { ToastMeasure } from "./ToastMeasure";
 import { ToastSurface } from "./ToastSurface";
 

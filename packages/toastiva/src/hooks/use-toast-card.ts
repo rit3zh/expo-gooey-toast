@@ -1,7 +1,12 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { Platform, useWindowDimensions } from "react-native";
 import { cancelAnimation } from "react-native-reanimated";
-import { DEFAULT_BODY_RADIUS, PH, SHOW_BODY_DELAY } from "../constants";
+import {
+  DEFAULT_BODY_RADIUS,
+  DEFAULT_CORNER_SMOOTHING,
+  PH,
+  SHOW_BODY_DELAY,
+} from "../constants";
 import { useToastTheme } from "../context";
 import { iconMap } from "../icons";
 import type {
@@ -60,6 +65,14 @@ function useToastCard(props: IToastivaProps) {
   const showProgress = props.toast.showProgress ?? props.defaultShowProgress;
   const bodyRadius =
     props.toast.bodyRadius ?? props.defaultBodyRadius ?? DEFAULT_BODY_RADIUS;
+  // 0 = plain circular corners, 1 = full squircle. Reads `cornerSmoothing` off
+  // the toast (per-toast) or `defaultCornerSmoothing` off the provider, falling
+  // back to the package default. Cast defensively so this compiles ahead of the
+  // public prop-type additions documented in the changelog.
+  const cornerSmoothing =
+    (props.toast as { cornerSmoothing?: number }).cornerSmoothing ??
+    (props as { defaultCornerSmoothing?: number }).defaultCornerSmoothing ??
+    DEFAULT_CORNER_SMOOTHING;
   const styleOverrides = useMemo(
     () => ({
       ...props.defaultStyles,
@@ -126,6 +139,9 @@ function useToastCard(props: IToastivaProps) {
     bodyRadius,
   ].join("|");
   const values = useToastSharedValues();
+  useEffect(() => {
+    values.cornerSmoothing.value = cornerSmoothing;
+  }, [cornerSmoothing, values]);
   const measure = useToastMeasurements(
     headerMeasureKey,
     cardMeasureKey,

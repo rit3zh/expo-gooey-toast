@@ -131,6 +131,7 @@ const ToastMorphSlot: React.MemoExoticComponent<
               props.defaultBodyLayout ?? ToastivaBodyLayout.Spread
             }
             defaultBodyRadius={props.defaultBodyRadius}
+            defaultCornerSmoothing={props.defaultCornerSmoothing}
             defaultDisableIOSBlur={props.defaultDisableIOSBlur}
             defaultExpandedHeight={props.defaultExpandedHeight}
             defaultExpandedWidth={props.defaultExpandedWidth}
