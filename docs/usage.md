@@ -37,6 +37,14 @@ toastiva.info("New version available");
 toastiva.warning("Battery low");
 ```
 
+## Singleton toasts
+
+Pass `singleton: true` to skip creating a new toast when one is already open. Unlike morph mode (which replaces the current toast), this ignores new calls until the current toast closes.
+
+```tsx
+toastiva.error("Couldn't save", { singleton: true });
+```
+
 ## Custom content
 
 ```tsx
