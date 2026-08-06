@@ -14,6 +14,9 @@ import {
 } from "./state";
 
 function addToast<T extends IToastivaOptions>(options: Partial<T>): string {
+  if (options.singleton && storeState.toasts.length > 0) {
+    return storeState.toasts[0].id;
+  }
   const id = `gooey-${++storeState.idCounter}`;
   const toast: IToastivaData = {
     id,
