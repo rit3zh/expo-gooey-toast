@@ -100,7 +100,18 @@ function useToastDismiss(params: IUseToastDismissParams) {
   ]);
 
   useEffect(() => {
+    remainingRef.current = null;
+  }, [displayDuration, toast.isLoading]);
+
+  useEffect(() => {
     if (paused) {
+      if (timerRef.current) {
+        clearTimeout(timerRef.current);
+        timerRef.current = null;
+      }
+      return;
+    }
+    if (toast.isLoading) {
       if (timerRef.current) {
         clearTimeout(timerRef.current);
         timerRef.current = null;
@@ -143,6 +154,7 @@ function useToastDismiss(params: IUseToastDismissParams) {
     showBody,
     shouldAutoExpand,
     toast,
+    toast.isLoading,
   ]);
 
   return { handleDismiss, isDismissing };
